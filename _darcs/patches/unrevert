@@ -1,0 +1,69 @@
+
+New patches:
+
+[unrevert
+anonymous**20051110225229] 
+<
+> {
+hunk ./eit.py 1
+-import pygame
+-from pygame.locals import *
+-
+-
+-class BlockPart:
+-	__init__():
+-		pass
+-
+-class Block:
+-	__init__():
+-		pass
+-		
+-
+-def main():
+-	# Initialise screen
+-	pygame.init()
+-	screen = pygame.display.set_mode((640, 480))
+-	pygame.display.set_caption('Eit')
+-
+-	# Fill background
+-	background = pygame.Surface(screen.get_size())
+-	background = background.convert()
+-	background.fill((250, 250, 250))
+-
+-	# Display some text
+-	font = pygame.font.Font(None, 36)
+-	text = font.render("Hello There", 1, (10, 10, 10))
+-	textpos = text.get_rect()
+-	textpos.centerx = background.get_rect().centerx
+-	background.blit(text, textpos)
+-
+-	# Blit everything to the screen
+-	screen.blit(background, (0, 0))
+-	pygame.display.flip()
+-
+-	# Event loop
+-	while 1:
+-		clock.tick(60)
+-		for event in pygame.event.get():
+-			if event.type == QUIT:
+-				return
+-
+-		screen.blit(background, (0, 0))
+-		pygame.display.flip()
+-
+-
+-if __name__ == '__main__': main()
++
+rmfile ./eit.py
+}
+
+Context:
+
+[ 
+viblo@dtek.chalmers.se**20051110224605] 
+[snd patch
+viblo@dtek.chalmers.se**20051110215336] 
+[init rev
+viblo@dtek.chalmers.se**20051110214914] 
+Patch bundle hash:
+fec5f7fb072b388f23a5d0281ba7fa18a0e5f69e

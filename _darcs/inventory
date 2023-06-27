@@ -1,0 +1,84 @@
+[init rev
+viblo@dtek.chalmers.se**20051110214914] 
+[snd patch
+viblo@dtek.chalmers.se**20051110215336] 
+[ 
+viblo@dtek.chalmers.se**20051110224605] 
+[ 
+viblo@dtek.chalmers.se**20051110232033] 
+[added some classes
+viblo@dtek.chalmers.se**20060419123321] 
+[moving blocks
+viblo@dtek.chalmers.se**20060420153838] 
+[rotating blocks
+viblo@dtek.chalmers.se**20060420160751] 
+[better rotating 
+viblo@dtek.chalmers.se**20060420181234] 
+[rotating blocks
+viblo@dtek.chalmers.se**20060423152202] 
+[moved block def to blocks.py
+viblo@dtek.chalmers.se**20060423152234] 
+[next block
+viblo@dtek.chalmers.se**20060423163003] 
+[added block sprites
+viblo@dtek.chalmers.se**20060424145508] 
+[added music files
+viblo@dtek.chalmers.se**20060424145615] 
+[added music, sound and py2exe
+viblo@dtek.chalmers.se**20060426142957] 
+[added background_info image
+viblo@dtek.chalmers.se**20060427200441
+ 
+] 
+[started move to pyOpenGL
+viblo@dtek.chalmers.se**20060428004506] 
+[lots of stuff
+viblo@dtek.chalmers.se**20060505230606] 
+[small refactoring
+viblo@dtek.chalmers.se**20060505233003] 
+[added all special blocks
+viblo@dtek.chalmers.se**20060514215750] 
+[new sounds
+viblo@dtek.chalmers.se**20060515141435] 
+[added sound files
+viblo@dtek.chalmers.se**20060515141458] 
+[better game over handling
+viblo@dtek.chalmers.se**20060515143031] 
+[welcome sound
+viblo@dtek.chalmers.se**20060515145330] 
+[new info texture
+viblo@dtek.chalmers.se**20060515145530] 
+[playable version
+viblo@dtek.chalmers.se**20060515204801] 
+[start of gui
+viblo@dtek.chalmers.se**20060515231626] 
+[working menu system
+viblo@dtek.chalmers.se**20060516222830] 
+[fixed ghost bug? added check each frame
+viblo@dtek.chalmers.se**20060517000523] 
+[help, small fixes
+viblo@dtek.chalmers.se**20060517205730] 
+[changed special spawning
+viblo@dtek.chalmers.se**20060517210656] 
+[before dl
+viblo@dtek.chalmers.se**20060517212644] 
+[new level system
+viblo@dtek.chalmers.se**20060518234755] 
+[gpl licence for distribution
+viblo@dtek.chalmers.se**20060518234838] 
+[added pause
+viblo@dtek.chalmers.se**20060519161142] 
+[new color effect
+viblo@dtek.chalmers.se**20060529235352] 
+[small fixes
+viblo@dtek.chalmers.se**20060531125656] 
+[renamed constants.py
+viblo@dtek.chalmers.se**20060531172519] 
+[added eit theme
+123@123-email.com**20060625224802] 
+[new graphics
+viblo@dtek.chalmers.se**20060626000404] 
+[added view highscore functionality
+123@123-email.com**20060628005614] 
+[small fix
+123@123-email.com**20060628005636] 

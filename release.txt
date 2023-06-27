@@ -1,0 +1,10 @@
+
+All
+- remove prints
+
+Win32 version
+- remove old dist and build folders
+- change upx to 1 in setup.py
+- run makeExe.bat
+
+

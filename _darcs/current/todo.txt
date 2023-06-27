@@ -1,0 +1,25 @@
+# osynlig bit?:
+Traceback (most recent call last):
+  File "eit.py", line 435, in ?
+    run_game()
+  File "eit.py", line 404, in run_game
+    m.main()
+  File "eit.py", line 400, in main
+    self.loop()
+  File "eit.py", line 349, in loop
+    player.update(player_events, frametime)
+  File "fields.py", line 781, in update
+    cleared_lines, special_blocks = self.field.check_full_row()
+  File "fields.py", line 229, in check_full_row
+    special_blocks += self.remove_line(full_line)
+  File "fields.py", line 238, in remove_line
+    self.blockparts_list.remove(self.blockparts[i][x])
+ValueError: list.remove(x): x not in list
+
+# mindre blink
+
+#
+check error 2 9 14 None
+check error 2 0 3 None
+check error 2 5 18 None #paket-skicka bit?
+check error 2 9 13 None # bro med lång i mitten.

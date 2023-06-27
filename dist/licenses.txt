@@ -1,0 +1,9 @@
+music from Eittris (its in Public Domain)
+sound from http://www.freesoundfiles.tintagel.net
+backgrounds from www.grsites.com
+
+menu system from PGU: http://www.imitationpickles.org/pgu
+pygame from www.pygame.org
+pyopengl from pyopengl.sourceforge.net
+psyco from psyco.sourceforge.net
+py2exe from www.py2exe.org
