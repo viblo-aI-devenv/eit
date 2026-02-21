@@ -249,7 +249,7 @@ class BlockField:
             try:
                 if self.blockparts[bp.y][bp.x] is not None or bp.y < 0 or bp.x < 0:
                     return False
-            except:
+            except IndexError:
                 return False
         return True
 
@@ -337,7 +337,7 @@ class BlockField:
                 ):
                     print("check error 1", bp)
                     return False
-            except:
+            except IndexError:
                 print("check error 2", bp.x, bp.y, self.blockparts[bp.y][bp.x])
                 return False
         return True

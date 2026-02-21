@@ -73,9 +73,9 @@ class DataManager:
             )
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
             glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
-            textures[
-                name[:-4]
-            ] = id  # we dont want the extension in the lookup dictionary
+            textures[name[:-4]] = (
+                id  # we dont want the extension in the lookup dictionary
+            )
 
         self.textures = textures
 
@@ -109,10 +109,10 @@ class DataManager:
                 )
                 glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST)
                 glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST)
-                backgrounds[
-                    name[:-4]
-                ] = id  # we dont want the extension in the lookup dictionary
-            except:
+                backgrounds[name[:-4]] = (
+                    id  # we dont want the extension in the lookup dictionary
+                )
+            except Exception:
                 pass
         self.backgrounds = backgrounds
 
@@ -122,5 +122,5 @@ class DataManager:
             fn = choice(filenames)
             # print("music:", fn)
             music = pygame.mixer.music.load("music/" + fn)
-        except:
+        except Exception:
             print("Couldnt load " + fn)

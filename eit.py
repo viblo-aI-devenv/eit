@@ -48,9 +48,6 @@ def init():
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST)
 
 
-import operator
-
-
 class Scoretable:
     def __init__(self):
         self.stats = {}
@@ -121,7 +118,7 @@ class Main(gui.Container):
         try:
             f = open("scoretable.dat", "r")
             self.scoretable = pickle.load(f)
-        except:
+        except Exception:
             self.scoretable = Scoretable()
             self.save_scoretable()
 
