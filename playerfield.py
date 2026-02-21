@@ -583,7 +583,7 @@ class PlayerField:
             try:
                 if random() > 0.1:
                     self.rumbleblocks.pop()
-            except:
+            except IndexError:
                 self.rumbles = 0
 
     def do_gameover(self):

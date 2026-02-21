@@ -127,7 +127,7 @@ class ManageProfilesDialog(gui.Dialog):
         profiles = ConfigObj("profiles.cfg")
         try:
             del profiles[self.profile_list.value]
-        except:
+        except KeyError:
             pass
         name = self.name.value[0:8]
         if name is not None:
@@ -194,7 +194,7 @@ class ManageProfilesDialog(gui.Dialog):
         profiles = ConfigObj("profiles.cfg")
         try:
             del profiles[self.profile_list.value]
-        except:
+        except KeyError:
             pass
         profiles.write()
         self.profile_list.clear()
