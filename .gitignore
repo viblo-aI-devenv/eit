@@ -1,5 +1,25 @@
+# Python bytecode
 __pycache__/
 *.py[cod]
 *.pyo
+
+# Virtual environments
 .venv*/
-*.dat
+
+# Game runtime data files (user-specific, generated at runtime)
+scoretable.dat
+h.dat
+myStats
+
+# OS / editor artifacts
+Thumbs.db
+@eaDir/
+.project
+.idea/
+*.swp
+*~
+
+# Legacy / build artifacts
+eit-*.zip
+makeExe.bat
+todo.txt
