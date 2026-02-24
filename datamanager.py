@@ -10,12 +10,16 @@ from pygame.locals import *
 
 class DataManager:
     def __del__(self):
-        glDeleteTextures(list(self.textures.values()))
-        glDeleteTextures(list(self.backgrounds.values()))
+        if isinstance(self.textures, dict):
+            for tex_id in self.textures.values():
+                glDeleteTextures(1, [tex_id])
+        if isinstance(self.backgrounds, dict):
+            for tex_id in self.backgrounds.values():
+                glDeleteTextures(1, [tex_id])
 
     def __init__(self):
-        self.textures = []
-        self.backgrounds = []
+        self.textures = {}
+        self.backgrounds = {}
         self.players = []
         self.gameover_players = []
         soundpath = "sounds"
