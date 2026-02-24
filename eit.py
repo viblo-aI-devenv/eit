@@ -561,7 +561,11 @@ class Main(gui.Container):
 
 def run_game():
     m = Main()
-    m.main()
+    try:
+        m.main()
+    finally:
+        if hasattr(m, "dm"):
+            m.dm.cleanup()
 
 
 def run_test():

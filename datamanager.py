@@ -9,13 +9,23 @@ from pygame.locals import *
 
 
 class DataManager:
-    def __del__(self):
+    def cleanup(self):
+        import ctypes
+
         if isinstance(self.textures, dict):
             for tex_id in self.textures.values():
-                glDeleteTextures(1, [tex_id])
+                arr = (ctypes.c_uint * 1)(tex_id)
+                glDeleteTextures(1, arr)
         if isinstance(self.backgrounds, dict):
             for tex_id in self.backgrounds.values():
-                glDeleteTextures(1, [tex_id])
+                arr = (ctypes.c_uint * 1)(tex_id)
+                glDeleteTextures(1, arr)
+
+    def __del__(self):
+        try:
+            self.cleanup()
+        except Exception:
+            pass
 
     def __init__(self):
         self.textures = {}
