@@ -264,6 +264,10 @@ function BlockField:removeFullRows()
         end
     end
 
+    -- Sort bottom-to-top so each removeLine() doesn't shift the y-indices of
+    -- rows that are yet to be removed (same fix needed in the Python original).
+    table.sort(fullLines, function(a, b) return a > b end)
+
     local specialBlock = nil
     for _, y in ipairs(fullLines) do
         local tmp = self:removeLine(y)
