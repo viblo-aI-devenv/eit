@@ -163,6 +163,9 @@ function PlayerField:nextTarget()
         end
     end
 
+    -- If self was not found in the list (e.g. dm.players not yet set), start from 1
+    if curIdx == nil then curIdx = 1 end
+
     -- Pick the next player after curIdx, wrapping around
     local nextIdx = (curIdx % #ok) + 1
     local candidate = ok[nextIdx]

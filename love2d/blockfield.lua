@@ -409,20 +409,21 @@ function BlockField:draw(dm)
         g.draw(dm.images["background_border"], px - 4, py - 4)
     end
 
-    -- Background tile  (240×528, tiled)
+    -- Background tile  (240×528, clipped to field interior)
     local bgKey = self.background_tile
     if bgKey and dm.backgrounds[bgKey] then
         local bgImg  = dm.backgrounds[bgKey]
         local bgW    = bgImg:getWidth()
         local bgH    = bgImg:getHeight()
-        -- Draw tiled over 240×528
         local fieldW, fieldH = 240, 528
         g.setColor(1, 1, 1, 1)
+        g.setScissor(px, py, fieldW, fieldH)
         for ty = 0, math.ceil(fieldH / bgH) do
             for tx = 0, math.ceil(fieldW / bgW) do
                 g.draw(bgImg, px + tx * bgW, py + ty * bgH)
             end
         end
+        g.setScissor()
     end
 
     -- Placed block parts  (offset by -BLOCK_SIZE in y to hide row 0)
@@ -451,6 +452,7 @@ function BlockField:draw(dm)
         local offX = (-dx * bwW * 2) % bwW   -- wrap to one tile width
         local offY = (-dy * bwH * 2) % bwH
         g.setColor(1, 1, 1, 0.9)
+        g.setScissor(px, py, 240, 528)
         g.push()
         g.translate(px - offX, py - offY)
         for ty = -1, math.ceil(528 / bwH) + 1 do
@@ -459,6 +461,7 @@ function BlockField:draw(dm)
             end
         end
         g.pop()
+        g.setScissor()
         g.setColor(1, 1, 1, 1)
     end
 

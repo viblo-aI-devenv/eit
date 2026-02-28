@@ -67,7 +67,7 @@ function Settings.new()
     self.fullscreen      = (data.fullscreen ~= false)   -- default true on TV
     self.music           = (data.music      ~= false)   -- default true
     -- active_profiles[0..3]: profile name string or "None"
-    self.active_profiles = data.active_profiles or {"None","None","None","None"}
+    self.active_profiles = data.active_profiles or {"Player1","None","None","None"}
 
     return self
 end
