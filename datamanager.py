@@ -9,13 +9,27 @@ from pygame.locals import *
 
 
 class DataManager:
+    def cleanup(self):
+        import ctypes
+
+        if isinstance(self.textures, dict):
+            for tex_id in self.textures.values():
+                arr = (ctypes.c_uint * 1)(tex_id)
+                glDeleteTextures(1, arr)
+        if isinstance(self.backgrounds, dict):
+            for tex_id in self.backgrounds.values():
+                arr = (ctypes.c_uint * 1)(tex_id)
+                glDeleteTextures(1, arr)
+
     def __del__(self):
-        glDeleteTextures(list(self.textures.values()))
-        glDeleteTextures(list(self.backgrounds.values()))
+        try:
+            self.cleanup()
+        except Exception:
+            pass
 
     def __init__(self):
-        self.textures = []
-        self.backgrounds = []
+        self.textures = {}
+        self.backgrounds = {}
         self.players = []
         self.gameover_players = []
         soundpath = "sounds"

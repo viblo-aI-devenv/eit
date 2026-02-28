@@ -123,7 +123,7 @@ class Theme:
         finally:
             f.close()
 
-    is_image = re.compile("\.(gif|jpg|bmp|png|tga)$", re.I)
+    is_image = re.compile(r"\.(gif|jpg|bmp|png|tga)$", re.I)
 
     def _get(self, key):
         if not key in self.config:

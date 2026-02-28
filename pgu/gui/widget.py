@@ -269,9 +269,9 @@ class Widget:
             fnc = con['fnc']
             values = list(con['values'])
             
-            nargs = fnc.func_code.co_argcount
-            names = list(fnc.func_code.co_varnames)[:nargs]
-            if hasattr(fnc,'im_class'): names.pop(0)
+            nargs = fnc.__code__.co_argcount
+            names = list(fnc.__code__.co_varnames)[:nargs]
+            if hasattr(fnc, '__self__'): names.pop(0)
             
             args = []
             magic = {'_event':event,'_code':code,'_widget':self}

@@ -30,17 +30,9 @@ GAME_DIR = os.path.dirname(os.path.abspath(__file__))
 if GAME_DIR not in sys.path:
     sys.path.insert(0, GAME_DIR)
 
-# The vendored PGU library lives in _pgu/ but the game imports it as 'pgu'.
-# Alias it in sys.modules before any game module is imported.
-import _pgu  # noqa: E402
-import _pgu.gui  # noqa: E402
-
-sys.modules.setdefault("pgu", _pgu)
-sys.modules.setdefault("pgu.gui", _pgu.gui)
-# Register every _pgu.X sub-module also as pgu.X
-for _key in list(sys.modules):
-    if _key.startswith("_pgu."):
-        sys.modules.setdefault(_key[1:], sys.modules[_key])
+# The vendored PGU library lives in pgu/ and is directly importable.
+import pgu  # noqa: E402
+import pgu.gui  # noqa: E402
 
 import pytest
 
