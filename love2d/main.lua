@@ -123,12 +123,13 @@ function startGame()
         end
     end
 
+    -- Set dm.players before calling nextTarget so the loop inside it works
+    dm.players = players
+
     -- Set initial targets
     for _, p in ipairs(players) do
         p:nextTarget()
     end
-
-    dm.players = players
 
     if settings.music then
         dm:playRandomMusic()
